@@ -1,7 +1,10 @@
-<h1>You Fell in love with: <%= thingVar.toUpperCase() %></h1>
- <% if(thingVar.toLowerCase() === 'stephen'){ %>
-  <p>
-    Good Choise
-    </p>
-<% } %>
-<p>P.S. it is an item</p>
+    <% include partials/header %>
+    <h1>You Fell in love with: <%= thingVar.toUpperCase() %></h1>
+     <% if(thingVar.toLowerCase() === 'stephen'){ %>
+      <p>
+        Good Choise
+        </p>
+    <% } %>
+    <p>P.S. it is an item</p>
+
+      <% include partials/footer %>

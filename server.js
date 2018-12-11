@@ -7,9 +7,16 @@ app.get("/", function(req, res){
 
 app.get("/fallinlovewith/:thing", function(req, res){
   let thing = req.params.thing;
-  res.render("love.ejs");
+  res.render("love.ejs", {thingVar: thing});
 });
-
+app.get("/posts", function(req, res){
+  var posts = [
+    {title: "post 1", aurthor: "Susy"},
+    {title: "my cool dog", aurthor: "Stephen"},
+    {title: "can you believe this doggy", aurthor: "Charlie"},
+  ];
+  res.render("posts.ejs", {posts: posts})
+})
 
 
 app.listen(3000, function(){
